@@ -15,10 +15,29 @@ import static org.junit.jupiter.api.Assertions.*;
 public class SetDeTenisTest {
     @Test
     public void testAunNoTermina() {
-        String valorEsperado = "Aún no termina";
-        String valorActual = SetDeTenis.evaluar(4, 5);
-        assertEquals(valorEsperado, valorActual);
+        String resultadoEsperado = "El set todavía no termina";
+        String resultadoActual = SetDeTenis.evaluar(4, 3);
+        assertEquals(resultadoEsperado, resultadoActual);
     }
     
-    // TODO: Agrega tus otros casos de prueba aquí
+    @Test
+    public void testGanadorA() {
+        String resultadoEsperado = "El ganador es el jugador A";
+        String resultadoActual = SetDeTenis.evaluar(7, 5);
+        assertEquals(resultadoEsperado, resultadoActual);
+    }
+    
+    @Test
+    public void testGanadorB() {
+        String resultadoEsperado = "El ganador es el jugador B";
+        String resultadoActual = SetDeTenis.evaluar(3, 7);
+        assertEquals(resultadoEsperado, resultadoActual);
+    }
+        
+    @Test
+    public void testInvalido() {
+        String resultadoEsperado = "Inválido";
+        String resultadoActual = SetDeTenis.evaluar(8, 3);
+        assertEquals(resultadoEsperado, resultadoActual);
+    }
 }

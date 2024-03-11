@@ -14,11 +14,17 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class AnnosBisiestosTest {
     @Test
-    public void test1988() {
-        String valorEsperado = "1988 es bisiesto";
-        String valorActual = AnnosBisiestos.evaluar(1988);
-        assertEquals(valorEsperado, valorActual);
+    public void testAnoBisiesto() {
+        
+        String valorEsperado1988 = "1988 es bisiesto";
+        String valorActual1988 = AnnosBisiestos.evaluar(1988);
+        assertEquals(valorEsperado1988, valorActual1988);
     }
     
-    // TODO: Agrega tus otros casos de prueba aquí
+    @Test    
+    public void testAnoNoBisiesto() {
+        String valorEsperado1900 = "1900 no es bisiesto";
+        String valorActual1900 = AnnosBisiestos.evaluar(1900);
+        assertEquals(valorEsperado1900, valorActual1900);
+    }
 }

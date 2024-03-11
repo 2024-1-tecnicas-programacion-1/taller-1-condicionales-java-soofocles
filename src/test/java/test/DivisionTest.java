@@ -16,12 +16,20 @@ import static org.junit.jupiter.api.Assertions.*;
 public class DivisionTest {
     @Test
     public void testDivisionExacta() {
-        String valorEsperado = "La división es exacta. \n"
-                + "Cociente: 2\n"
-                + "Residuo: 4";
-        String valorActual = Division.evaluar(14, 5);
+        String valorEsperado = "La división es exacta.\n"
+                + "Cociente: 9\n"
+                + "Residuo: 0";
+        String valorActual = Division.evaluar(45, 5);
         assertEquals(valorEsperado, valorActual);
     }
     
-    // TODO: Agrega tus otros casos de prueba aquí
+    @Test                                        
+    public void testDivisionNoExacta() {
+        String valorEsperado1 = "La división no es exacta.\n"
+                                + "Cociente: 4\n"
+                                + "Residuo: 1";
+        String valorActual1 = Division.evaluar(13, 3);
+        assertEquals(valorEsperado1, valorActual1);
+        
+    }
 }
